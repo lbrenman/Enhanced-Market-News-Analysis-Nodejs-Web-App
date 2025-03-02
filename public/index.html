@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Insights Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Market Insights Dashboard</h1>
+      <button id="refresh-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+        </svg>
+        Refresh
+      </button>
+    </header>
+    
+    <div id="loading-indicator" class="hidden">
+      <div class="spinner"></div>
+      <p>Loading the latest market data...</p>
+    </div>
+
+    <div id="content">
+      <section id="analysis-section">
+        <h2>Analysis</h2>
+        <div class="analysis-container">
+          <div class="analysis-column">
+            <h3>Market Sentiment</h3>
+            <div id="sentiment-container" class="card-container"></div>
+          </div>
+          
+          <div class="analysis-column">
+            <h3>Consumer Behavior Insights</h3>
+            <div id="consumer-container" class="card-container"></div>
+          </div>
+          
+          <div class="analysis-column">
+            <h3>Volatility & Investment Insights</h3>
+            <div id="volatility-container" class="card-container"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="news-section">
+        <h2>Market News</h2>
+        <div id="news-container" class="scrollable-news"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
